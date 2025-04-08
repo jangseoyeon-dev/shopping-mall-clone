@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital@0;1&family=Noto+Serif:wght@367&family=Roboto+Slab:wght@200&display=swap");
+@import "tailwindcss";
+
+.noto-serif {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 616;
+  font-style: normal;
+  font-variation-settings: "wdth" 75;
+}
