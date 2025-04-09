@@ -19,10 +19,10 @@ function HomeHeader() {
   const [showSideBar, setShowSideBar] = useState(false);
   return (
     <>
-      <div className="flex items-center justify-between max-w-screen p-4 px-5 fixed top-0 left-0 right-0 text-white z-10">
+      <div className="flex items-center justify-between max-w-screen p-4 px-5 sm:px-10 fixed top-0 left-0 right-0 text-white z-10">
         <div className="flex items-center">
           <div
-            className="noto-serif text-4xl pr-10"
+            className="noto-serif text-3xl pr-10 sm:text-4xl"
             onClick={() => navigate(`/`)}
           >
             TAMBURINS
