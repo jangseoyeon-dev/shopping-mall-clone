@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
-import "./App.css";
-import Navbar from "./components/Navbar";
+
+import Navbar from "./components/HomeHeader";
+import Footer from "./components/Footer";
 
 function App() {
   // 1. 전체상품페이지, 로그인, 상품상세페이지
@@ -17,6 +18,7 @@ function App() {
     <>
       <Navbar />
       <Outlet />
+      <Footer />
     </>
   );
 }
