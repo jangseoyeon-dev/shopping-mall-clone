@@ -8,7 +8,7 @@ function ProductCard({ product }) {
   };
   return (
     <div className="mb-3 ml-2" onClick={getProductDetail}>
-      <img src={product?.img} />
+      <img src={product?.img} alt={product?.title} />
       <div className="hover:scale-105">
         <div className="mt-2 text-xs text-pink-500 font-semibold">
           {product?.choice && "Choice"}
