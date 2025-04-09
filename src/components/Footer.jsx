@@ -4,7 +4,7 @@ import FooterBox from "./FooterBox";
 function Footer() {
   return (
     <footer>
-      <div className="flex border-t-1 border-gray-200 p-10 ">
+      <div className="block border-t-1 border-gray-200 p-10 sm:flex">
         <FooterBox
           title="매장안내"
           content={["대한민국", "일본", "중국", "전시"]}

@@ -16,12 +16,15 @@ function LoginPage() {
         <h1 className="text-2xl font-bold mb-6 text-center border-b-1 border-gray-400">
           로그인
         </h1>
-        <form className="space-y-4" onSubmit={(e) => loginUser(e)}>
+        <form
+          className="space-y-4 w-[300px] lg:w-[500px]"
+          onSubmit={(e) => loginUser(e)}
+        >
           <div>
             <input
               type="email"
               name="email"
-              className="w-[500px] px-4 py-2 border border-gray-300 rounded-md "
+              className="w-full px-4 py-2 border border-gray-300 rounded-md"
               placeholder="아이디(이메일)"
             />
           </div>
