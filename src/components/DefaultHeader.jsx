@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faBucket, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router";
+import SideBar from "./SideBar";
 
 const navItems = [
   "BOTTARI",
@@ -15,12 +16,14 @@ const navItems = [
 
 function HomeHeader() {
   const navigate = useNavigate();
+  const [showSideBar, setShowSideBar] = useState(false);
+
   return (
     <>
-      <div className="flex items-center justify-between max-w-screen p-4 fixed top-0 left-0 right-0 text-black z-10 bg-white">
+      <div className="flex items-center justify-between max-w-screen p-4 px-5 fixed top-0 left-0 right-0 text-black z-10 bg-white">
         <div className="flex items-center">
           <div
-            className="noto-serif text-4xl pr-10"
+            className="noto-serif text-4xl pr-10 "
             onClick={() => navigate(`/`)}
           >
             TAMBURINS
@@ -55,10 +58,18 @@ function HomeHeader() {
           />
           <FontAwesomeIcon icon={faBucket} size="1.5xl" />
           <div className="block lg:hidden">
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon
+              icon={faBars}
+              onClick={() => {
+                setShowSideBar(!showSideBar);
+              }}
+            />
           </div>
         </div>
       </div>
+      {showSideBar && (
+        <SideBar items={navItems} setShowSideBar={setShowSideBar} />
+      )}
     </>
   );
 }

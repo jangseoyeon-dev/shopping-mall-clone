@@ -14,7 +14,7 @@ function ProductPage() {
     getProducts();
   }, []);
   return (
-    <div className="pb-50 grid grid-cols-3">
+    <div className="pb-50 grid grid-cols-1 sm:grid-cols-3">
       {productList.map((product) => (
         <ProductCard product={product} />
       ))}
