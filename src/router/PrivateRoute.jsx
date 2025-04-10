@@ -1,6 +1,7 @@
 import React from "react";
-import { Navigate, useOutletContext } from "react-router";
+import { Navigate } from "react-router";
 import DetailPage from "../page/DetailPage";
+import { useOutletContext } from "react-router";
 
 const PrivateRoute = () => {
   const { isLogin } = useOutletContext();

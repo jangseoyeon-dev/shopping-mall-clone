@@ -1,9 +1,13 @@
-import { Outlet } from "react-router";
-
-import Navbar from "./components/HomeHeader";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Outlet } from "react-router";
+import { useState } from "react";
+import { useLocation } from "react-router";
 
 function App() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  console.log(isHome);
   // 1. 전체상품페이지, 로그인, 상품상세페이지
   // 2. 전체 상품페이지에서는 전체 상품을 볼 수 있다.
   // 3. 로그인 버튼을 누르면 로그인 페이지가 나온다
@@ -13,11 +17,12 @@ function App() {
   // 7. 로그아웃이 되면 상품 디테일페이지를 볼 수 없다.다시 로그인 페이지가 보인다.
   // 8. 로그인을 하면 로그아웃이 보이고 로그아웃을 하면 로그인이 보인다
   // 9. 상품을 검색할 수 있다.
+  const [isLogin, setIsLogin] = useState(false);
 
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <Header isLogin={isLogin} setIsLogin={setIsLogin} isHome={isHome} />
+      <Outlet context={{ isLogin, setIsLogin }} />
       <Footer />
     </>
   );
