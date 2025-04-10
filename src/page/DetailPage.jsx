@@ -9,7 +9,7 @@ function DetailPage() {
   const [choiceColor, setChoiceColor] = useState("");
 
   const getProduct = async () => {
-    let url = `http://localhost:4000/products/${id}`;
+    let url = `https://my-json-server.typicode.com/jangseoyeon-dev/shopping-mall-clone/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     setProduct(data);
